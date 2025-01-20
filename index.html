@@ -32,9 +32,11 @@
           <div>
             <h1 class="weather-app-city" id="weather-city"></h1>
             <p class="weather-app-details">
-              Tuesday 22:07, Moderate rain <br />
-              Humidity: <strong>57%</strong>, Wind:
-              <strong>67.6km/h</strong>
+              <span id="time"></span>,
+              <span id="description"> </span>
+              <br />
+              Humidity: <strong id="humidity"></strong>, Wind:
+              <strong id="windspeed"></strong>
             </p>
           </div>
           <div class="weather-app-temperature-container">
@@ -51,7 +53,8 @@
         </p>
       </footer>
     </div>
-
+    <!-- js to display correct info for time, humidity,wind speed and temperature, hence
+    why it is null in html -->
     <script src="app.js"></script>
   </body>
 </html>

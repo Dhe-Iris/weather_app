@@ -1,13 +1,19 @@
 function updateCityTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.daily[0].temperature.day;
-
   let cityName = document.querySelector("#weather-city");
+  let decriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windSpeedElement = document.querySelector("#windspeed");
+  let currentDateELement = document.querySelector("#time");
+  let currentDate = new Date();
 
   cityName.innerHTML = response.data.city;
-
   temperatureElement.innerHTML = Math.round(temperature);
-  console.log(temperatureElement);
+  decriptionElement.innerHTML = response.data.daily[0].condition.description;
+  humidityElement.innerHTML = `${response.data.daily[0].temperature.humidity}%`;
+  windSpeedElement.innerHTML = `${response.data.daily[0].wind.speed}km/h`;
+  currentDateELement.innerHTML = formatDate(currentDate);
 }
 
 function searchCity(city) {
@@ -26,4 +32,32 @@ function displayCityName(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", displayCityName);
 
-searchCity("lagos"); // search lagos by default
+searchCity("lagos"); // search lagos info by default
+
+// Format the current date and time for display
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let day = date.getDay();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let formattedDay = days[day];
+  return `${formattedDay} ${hours}:${minutes}`;
+}

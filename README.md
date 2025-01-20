@@ -34,7 +34,7 @@ A beautifully simple and responsive Weather App that provides real-time weather 
 2. Navigate to the project folder.
 3. Open `index.html` in your favorite browser to view the app locally.
 
-The app is also hosted on **Netlify**—view it live [here](#).
+The app is also hosted on **Netlify**—view it live [https://irisweatherapp.netlify.app/].
 
 ---
 

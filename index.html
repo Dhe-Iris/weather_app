@@ -15,20 +15,32 @@
   <body>
     <div class="app-body">
       <header>
-        <form action="">
-          <input type="search" placeholder="Enter a city...." required />
-          <input type="submit" value="Search" />
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city...."
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-btn" />
         </form>
       </header>
       <main>
-        <div>
-          <h1>Lagos</h1>
-          <p>
-            Tuesday 22:07, Moderate rain <br />
-            Humidity: 57% , Wind: 67.6km/h
-          </p>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city">Lagos</h1>
+            <p class="weather-app-details">
+              Tuesday 22:07, Moderate rain <br />
+              Humidity: <strong>57%</strong>, Wind:
+              <strong>67.6km/h</strong>
+            </p>
+          </div>
+          <div class="weather-app-temperature-container">
+            <div class="weather-app-icon">☀️</div>
+            <div class="weather-app-temperature">12</div>
+            <div class="weather-app-unit">°C</div>
+          </div>
         </div>
-        <div>☀️12°C</div>
       </main>
       <footer>
         <p>

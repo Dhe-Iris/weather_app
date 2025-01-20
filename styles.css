@@ -7,11 +7,16 @@ body {
   font-variation-settings: "wdth" 100;
 }
 a {
-  color: purple;
+  color: #800080;
   text-decoration: none;
+  transition: all 0.3ms ease-in-out;
 }
+a:hover {
+  color: #c04362;
+}
+
 .app-body {
-  background-color: white;
+  background-color: #ffffff;
   max-width: 600px;
   margin: 45px auto;
   padding: 30px;
@@ -30,16 +35,27 @@ header {
   width: 80%;
   font-size: 16px;
   padding: 15px 20px;
+  cursor: pointer;
 }
 
 .search-form-btn {
-  background-color: purple;
+  background-color: #800080;
   padding: 15px 30px;
   font-size: 16px;
   border: none;
   border-radius: 6px;
   margin-left: 5px;
-  color: #fff;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 1.3ms ease-in-out;
+}
+.search-form-btn:hover {
+  background-color: #b944b9;
+  color: #ffffff;
+}
+.search-form-btn:active {
+  transform: scale(0.95); /* Example: Shrinks the button when clicked */
+  background-color: #c04362; /* Change the background color on click */
 }
 
 main {
@@ -93,4 +109,20 @@ footer {
   text-align: center;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 600px) {
+  #search-form-input {
+    width: 60%;
+  }
+
+  .weather-app-temperature {
+    font-size: 68px;
+    font-weight: bold;
+    line-height: 78px;
+  }
+  .weather-app-icon {
+    width: 68px;
+    height: 78px;
+  }
 }
